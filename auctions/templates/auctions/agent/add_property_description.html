@@ -1,0 +1,33 @@
+{% extends 'auctions/agent/agent_base.html'%}
+
+{%load bootstrap4%}
+
+{% block title %}
+Description
+{% endblock %}
+
+{% block heading %}
+Add Property Description
+{% endblock heading %}
+
+
+{% block content %}
+<br>
+<hr>
+<div class="container">
+    <form method="post">
+        {%csrf_token%}
+        {% comment %} {%bootstrap_form form%} {% endcomment %}
+        {{ form.as_p }}
+        <input type="submit" value="Add Description" class="btn btn-default">
+    </form>
+</div>
+<script>
+        var editor = new MediumEditor('.editable');
+</script>
+<br/>
+<br/>
+<br/><br/>
+<br/>
+<br/>
+{% endblock %}

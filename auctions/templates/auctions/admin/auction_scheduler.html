@@ -1,0 +1,18 @@
+{%extends 'auctions/admin/admin_base.html'%}
+{%load static%}
+{%load bootstrap4%}
+{%block heading%}
+Schedule The Auction
+{%endblock%}
+{%block content%}
+<br>
+<hr>
+<div>
+    <form method="post">
+        {%csrf_token%}
+        {%bootstrap_form form%}
+        <input type="submit" value="Schedule This Auction" class="btn btn-danger">
+    </form>
+</div>
+
+{%endblock%}

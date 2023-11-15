@@ -1,0 +1,24 @@
+{% extends 'auctions/agent/agent_base.html'%}
+
+{%load bootstrap4%}
+
+{% block title %}
+Add Images
+{% endblock %}
+
+{% block heading %}
+Add Property Images
+{% endblock heading %}
+
+
+{% block content %}
+<br>
+<hr>
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        {%bootstrap_form form%}
+        <input type="submit" value="Add Images" class="btn btn-default">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{% load static %}
+{%load bootstrap4%}
+{%block title%}LogIn{%endblock%}
+{%block heading%}
+Log In
+{%endblock%}
+{%block content%}
+
+<div id="scroll" class="container">
+    {%for message in messages%}
+    <h6 style="color:red;">{{message}}</h6>
+    {%endfor%}
+    <form method="post" align="left">
+        {%csrf_token%}
+        {%bootstrap_form form%}
+        If you have forgotten your password you can reset it here - <a href="{% url 'auctions:forgot_password_email' %}">Forgot Password!</a><br/>
+        <input type="submit" value="LogIn" class="btn btn-success">
+    </form>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+</div>
+{%endblock%}

@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+
+{%load bootstrap4%}
+
+{% block title %}
+Evaluation
+{% endblock %}
+
+{% block heading %}
+Apply for Evaluation
+{% endblock heading %}
+
+
+{% block content %}
+<hr>
+<br>
+<div class="container">
+    <form method="post" align="left">
+        {%csrf_token%}
+        {%bootstrap_form form%}
+        <input type="submit" value="Apply" class="btn btn-success">
+    </form>
+</div>
+{% endblock %}
